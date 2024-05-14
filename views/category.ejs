@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= categoryName %></title>
+  <title><%= categoryName.charAt(0).toUpperCase() + categoryName.slice(1) %></title>
 </head>
 <body>
     <%- include('./partials/nav') %>
@@ -12,8 +12,7 @@
         <% menuItems.forEach((meal) => { %>
               <li><b><%= meal.name %></b>, <i>£<%= meal.price %></i>, Rating: <%= meal.rating %>, <br> <%= meal.details %></li>
         <% }) %>
-        </ul>
+    </ul>
 
-        
 </body>
 </html>
