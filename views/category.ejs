@@ -10,8 +10,11 @@
 
     <ul>
         <% menuItems.forEach((meal) => { %>
-              <li><b><%= meal.name %></b>, <i>£<%= meal.price %></i>, Rating: <%= meal.rating %>, <br> <%= meal.details %></li>
-        <% }) %>
+            <% if (meal.rating === 5) { %>
+              <li> *** <b><%= meal.name %></b>, <i>£<%= meal.price %></i>, Rating: <%= meal.rating %>, <br> <%= meal.details %></li>
+              <% } else { %>
+                <li><b><%= meal.name %></b>, <i>£<%= meal.price %></i>, Rating: <%= meal.rating %>, <br> <%= meal.details %></li>
+        <% }}) %>
     </ul>
 
 </body>
